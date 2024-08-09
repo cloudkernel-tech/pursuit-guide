@@ -17,7 +17,7 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
 
 - **pursuit_msgs** (main branch): 定制的Pursuit消息，仓库地址： `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
 
-- **mavros** (dev_pursuit_agv branch)：为Pursuit自动驾驶仪定制的mavros包，仓库地址： `<https://github.com/cloudkernel-tech/mavros>`_
+- **mavros** (dev_pursuit_agv branch)：为Pursuit自动驾驶仪定制的mavros包，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
 
 
 1. pursuit_driver node
