@@ -17,7 +17,7 @@ Motivation
 
 Autonomous driving has been widely accepted as an essential tool in various industrial applications including surveillance, infrastructure inspection, agriculture, etc.
 Despite that technologies are evolving rapidly in this field, the scaling of autonomous driving applications is hindered by the scarcity of open collaborative products that
-can be easily integrated for vertical market segments. The Pursuit autopilot is presented by Cloudkernel Technologies as an open solution for agriculture and surveillance,
+can be easily integrated for vertical market segments. The Pursuit autopilot is presented by Cloudkernel Technologies as an open solution for agriculture and inspection,
 and it aims to aid partners to deliver autonomous driving services with maximized efficiency to end-users.
 
 
@@ -53,8 +53,8 @@ Our main webpage is `<https://cloudkernel.cn>`_, and you may contact us by email
 目标
 -----------
 
-自动驾驶已被广泛接受为各种工业应用（包括监控、基础设施检查、农业等）的必备工具。尽管该领域的技术正在迅速发展，但自动驾驶应用规模化仍受到缺乏易于集成到垂直细分市场的开放式协作产品的阻碍。
-Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种用于农业和监控的开放式解决方案，旨在帮助合作伙伴以最大效率向最终用户提供自动驾驶服务。
+自动驾驶已被广泛接受为各种工业应用（包括监控、基础设施巡检、农业等）的必备工具。尽管该领域的技术正在迅速发展，但自动驾驶应用规模化仍受到缺乏易于集成到垂直细分市场的开放式协作产品的阻碍。
+Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种用于农业和巡检的开放式解决方案，旨在帮助合作伙伴以最大效率向最终用户提供自动驾驶服务。
 
 关于我们
 ----------------
@@ -83,8 +83,12 @@ Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种�
    :maxdepth: 2
 
    intro
+   system-overview
+   product-options
    gallery
-
+   quick-start
+   api
+   tutorials_en/index
 
 
 .. toctree::
@@ -93,4 +97,9 @@ Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种�
    :maxdepth: 2
 
    intro_zh
+   system-overview-zh
+   product-options-zh
    gallery_zh
+   quick-start-zh
+   api-zh
+   tutorials_zh/index
