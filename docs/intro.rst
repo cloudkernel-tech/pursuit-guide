@@ -7,7 +7,7 @@ Introduction
    :scale: 60 %
    :align: center
 
-Pursuit Autopilot solution is presented by Cloudkernel Technologies (Shenzhen) Co., Ltd. It provides a core tool for autonomous driving in
+The Pursuit autopilot is presented by Cloudkernel Technologies (Shenzhen) Co., Ltd. It provides a core tool for autonomous driving in
 industrial applications, and can help end-users deliver services quickly based on RTK (Real-Time Kinematics) positioning (current status).
 
 .. role:: underline-text
