@@ -18,6 +18,12 @@ industrial applications, and can help end-users deliver services quickly based o
 Use Cases
 -----------
 
+.. image:: img/intro/usecase.png
+   :height: 350 px
+   :width: 750 px
+   :scale: 100 %
+   :align: center
+
 The Pursuit autopilot is a high-precision positioning, navigation and control system designed for open environments. It provides customized solutions
 for agricultural and inspection automation to enhance the accuracy and efficiency of operations.
 
