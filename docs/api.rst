@@ -1,9 +1,9 @@
 Application Programming Interface (API)
 ==========================================
 
-We provide open source API for development with the Kerloud UAV series, and candidate API interfaces will support C++, python and other languages.
+We provide open source API for development with Pursuit autopilot, and candidate API interfaces will support C++, python and other languages.
 Details will be updated continuously in this part. Note that we assume users are familiar with basic concepts about ROS, and those who don't meet the
-prerequisite are recommended to go through official tutorials in http://wiki.ros.org/ROS/Tutorials.
+prerequisite are recommended to go through official tutorials in `<http://wiki.ros.org/ROS/Tutorials>`_.
 
 .. caution::
 
