@@ -7,7 +7,7 @@
    :scale: 60 %
    :align: center
 
-Pursuit自驾仪由云讷科技出品，为行业应用提供自动驾驶的核心工具，可以帮助终端用户快速构建基于RTK定位的自动驾驶方案。
+Pursuit自驾仪由云讷科技出品，为行业应用提供自动驾驶的核心工具，可以帮助终端用户快速构建基于RTK定位的自动驾驶方案（当前状态）。
 
 .. role:: underline-text
    :class: underline-text
