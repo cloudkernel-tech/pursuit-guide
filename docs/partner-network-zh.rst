@@ -11,7 +11,7 @@
 ----------------
 
 .. image:: img/partner-network/yhs.png
-   :height: 550 px
+   :height: 400 px
    :width: 750 px
    :scale: 60 %
    :align: center
@@ -24,7 +24,7 @@
 RTK设备供应商
 -----------------
 .. image:: img/partner-network/qf.png
-   :height: 550 px
+   :height: 450 px
    :width: 750 px
    :scale: 60 %
    :align: center
@@ -34,7 +34,7 @@ RTK设备供应商
    演示视频: `<https://www.bilibili.com/video/BV12va2eEE2K>`_
 
 .. image:: img/partner-network/comnav.png
-   :height: 550 px
+   :height: 450 px
    :width: 750 px
    :scale: 60 %
    :align: center

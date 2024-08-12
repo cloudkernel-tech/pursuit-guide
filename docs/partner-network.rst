@@ -13,11 +13,11 @@ And we can provide following services to maximize the value delivered to custome
 AGV Chassis Suppliers
 ------------------------
 
-.. image:: img/partner-network/yhs.png
-   :height: 550 px
-   :width: 750 px
-   :scale: 60 %
-   :align: center
+    .. image:: img/partner-network/yhs.png
+       :height: 400 px
+       :width: 750 px
+       :scale: 60 %
+       :align: center
 
 - **YUHESEN Robot**: `<https://www.yuhesen.com/>`_
 
@@ -26,7 +26,7 @@ AGV Chassis Suppliers
 RTK Device Suppliers
 -----------------------
 .. image:: img/partner-network/qf.png
-   :height: 550 px
+   :height: 450 px
    :width: 750 px
    :scale: 60 %
    :align: center
@@ -37,7 +37,7 @@ RTK Device Suppliers
 
 
 .. image:: img/partner-network/comnav.png
-   :height: 550 px
+   :height: 450 px
    :width: 750 px
    :scale: 60 %
    :align: center
