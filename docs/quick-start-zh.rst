@@ -57,3 +57,9 @@ Pursuit 自动驾驶仪的设计更侧重于简单的用户界面，采用平板
        :scale: 60 %
        :alt: 巡航任务区域设置
        :align: center
+
+
+
+.. hint::
+
+     视频演示可以参考：https://www.bilibili.com/video/BV1Ty411a7Eg

@@ -59,4 +59,6 @@ Mission Mode (For Users)
        :align: center
 
 
+.. hint::
 
+     视频演示可以参考：https://www.bilibili.com/video/BV1Ty411a7Eg
