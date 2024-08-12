@@ -34,9 +34,9 @@ Mission Mode (For Users)
 
 #. Waypoint Mission
 
-    - Enter the waypoint setting page.
+    - Enter the mission setup page.
     - Add waypoints as shown in the figure.
-    - Upload the waypoints, swipe right to unlock and start the mission, and the unmanned vehicle will follow the set waypoints.
+    - Upload the waypoints, swipe right to unlock and start the mission, and the vehicle will follow the mission autonomously.
 
     .. image:: img/quick-start/waypoint.jpg
        :height: 500 px
@@ -47,9 +47,9 @@ Mission Mode (For Users)
 
 #. Survey Mission
 
-    - Enter the waypoint setting page.
+    - Enter the mission setup page.
     - Add a pattern, create a mapping pattern, and select the cruise mission area as shown in the figure.
-    - Upload the area trajectory points, swipe right to unlock and start the mission, and the unmanned vehicle will follow the generated trajectory.
+    - Upload the area trajectory points, swipe right to unlock and start the mission, and the vehicle will follow the generated trajectory.
 
     .. image:: img/quick-start/survey.jpg
        :height: 450 px
