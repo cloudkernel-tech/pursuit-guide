@@ -41,3 +41,5 @@ RTK设备供应商
 
 (2) **司南导航**: `<https://www.comnavtech.com/>`_
 
+    演示视频: `<https://www.bilibili.com/video/BV1WCeKeqE8L>`_
+

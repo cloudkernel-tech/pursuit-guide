@@ -17,10 +17,10 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
 
 - **pursuit_msgs** (main branch): 定制的Pursuit消息，仓库地址： `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
 
-- **mavros** (dev_pursuit_agv branch)：为Pursuit自动驾驶仪定制的mavros包，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
+- **mavros** (dev_pursuit_agv branch)：为Pursuit自动驾驶仪定制的mavros包，它是与自驾仪交互的另外一个包，只适合高级开发者使用，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
 
 
-1. pursuit_driver node
+1. pursuit_driver包
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 (1) Subscribed topics
@@ -83,10 +83,14 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
     在ENU坐标系中表达的车辆姿态角速率。
 
 
-2. pursuit_msgs package
+2. pursuit_msgs包
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 定制消息可以在 `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_ 查阅，它们的含义在定义中很容易理解。
 
 
 
+3. mavros包
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+mavros 包源自 PX4 社区（'<http://wiki.ros.org/mavros>'_）。我们为 Pursuit 自动驾驶仪添加了自定义消息。大多数消息都可以在官方的 mavros wiki 页面上查阅，这里列举我们常用的部分。

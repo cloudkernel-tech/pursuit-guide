@@ -18,7 +18,7 @@ The ROS API for Pursuit autopilot is implemented in ROS packages, and we maintai
 
 - **pursuit_msgs** (main branch): customized pursuit messages, and the repository is released in `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
 
-- **mavros** (dev_pursuit_agv branch) : the customized mavros package for pursuit autopilot, and the repository is released in `<https://gitee.com/cloudkernel-tech/mavros>`_
+- **mavros** (dev_pursuit_agv branch) : the customized mavros package for pursuit autopilot, and it's an alternative method to interface with the autopilot (recommended for advanced developers only). The repository is released in `<https://gitee.com/cloudkernel-tech/mavros>`_.
 
 
 1. pursuit_driver node
@@ -88,5 +88,14 @@ The ROS API for Pursuit autopilot is implemented in ROS packages, and we maintai
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The customized messages can be referred in `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_, and they are self-explanatory in corresponding definitions.
+
+
+3. mavros package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The mavros package originates from the PX4 community (`<http://wiki.ros.org/mavros>`_). We add customized messages for the Pursuit autopilot. Most messages can be referred in the official mavros wiki page,
+and we only list those that are commonly used in our case.
+
+
 
 

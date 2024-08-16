@@ -44,5 +44,7 @@ RTK Device Suppliers
 
 - **Comnav Technology**: `<https://www.comnavtech.com/>`_
 
+    Demonstration video: `<https://www.bilibili.com/video/BV1WCeKeqE8L>`_
+
 
 
