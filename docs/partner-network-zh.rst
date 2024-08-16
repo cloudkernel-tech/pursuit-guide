@@ -13,10 +13,10 @@
 .. image:: img/partner-network/yhs.png
    :height: 400 px
    :width: 750 px
-   :scale: 60 %
+   :scale: 50 %
    :align: center
 
-(1) **煜禾森机器人**: `<https://www.yuhesen.com/>`_
+- **煜禾森机器人**: `<https://www.yuhesen.com/>`_
 
     演示视频: `<https://www.bilibili.com/video/BV1fx4y1J7v2>`_
 
@@ -26,20 +26,27 @@ RTK设备供应商
 .. image:: img/partner-network/qf.png
    :height: 450 px
    :width: 750 px
-   :scale: 60 %
+   :scale: 50 %
    :align: center
 
-(1) **全方RTK**: `<http://www.qonfon.com/>`_
+- **全方RTK**: `<http://www.qonfon.com/>`_
 
    演示视频: `<https://www.bilibili.com/video/BV12va2eEE2K>`_
 
 .. image:: img/partner-network/comnav.png
    :height: 450 px
    :width: 750 px
-   :scale: 60 %
+   :scale: 50 %
    :align: center
 
-(2) **司南导航**: `<https://www.comnavtech.com/>`_
+- **司南导航**: `<https://www.comnavtech.com/>`_
 
     演示视频: `<https://www.bilibili.com/video/BV1WCeKeqE8L>`_
 
+.. image:: img/partner-network/unicore.png
+   :height: 400 px
+   :width: 750 px
+   :scale: 50 %
+   :align: center
+
+- **和芯星通**: `<https://en.unicore.com>`_

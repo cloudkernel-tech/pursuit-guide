@@ -16,7 +16,7 @@ AGV Chassis Suppliers
     .. image:: img/partner-network/yhs.png
        :height: 400 px
        :width: 750 px
-       :scale: 60 %
+       :scale: 50 %
        :align: center
 
 - **YUHESEN Robot**: `<https://www.yuhesen.com/>`_
@@ -28,7 +28,7 @@ RTK Device Suppliers
 .. image:: img/partner-network/qf.png
    :height: 450 px
    :width: 750 px
-   :scale: 60 %
+   :scale: 50 %
    :align: center
 
 - **QF RTK**: `<http://www.qonfon.com/>`_
@@ -39,7 +39,7 @@ RTK Device Suppliers
 .. image:: img/partner-network/comnav.png
    :height: 450 px
    :width: 750 px
-   :scale: 60 %
+   :scale: 50 %
    :align: center
 
 - **Comnav Technology**: `<https://www.comnavtech.com/>`_
@@ -47,4 +47,10 @@ RTK Device Suppliers
     Demonstration video: `<https://www.bilibili.com/video/BV1WCeKeqE8L>`_
 
 
+.. image:: img/partner-network/unicore.png
+   :height: 400 px
+   :width: 750 px
+   :scale: 50 %
+   :align: center
 
+- **Unicore Communications**: `<https://en.unicore.com>`_
