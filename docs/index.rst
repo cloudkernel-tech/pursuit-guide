@@ -99,7 +99,7 @@ Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种�
 
    intro_zh
    system-overview-zh
-   product-options-zh
+   product-options-zh.md
    partner-network-zh
    gallery_zh
    quick-start-zh
