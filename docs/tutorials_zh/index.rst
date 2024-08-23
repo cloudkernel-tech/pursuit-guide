@@ -5,6 +5,7 @@
 
 **入门操作级别**
 
+* :ref:`tutorial_docker_env_zh`:本教程介绍如何在机载计算机中为 Pursuit autopilot 部署 docker 容器。
 
 
 **中等级别**
@@ -13,6 +14,8 @@
 .. toctree::
    :hidden:
    :maxdepth: 2
+
+   docker_env_zh
 
 
 
