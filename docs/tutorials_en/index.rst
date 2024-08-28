@@ -7,6 +7,7 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_docker_env`: This tutorial illustrates how to deploy a docker container for Pursuit autopilot in a companion computer.
 
+* :ref:`tutorial_periph_config`: This tutorial shows how to configure various peripherals for Pursuit autopilot.
 
 
 
@@ -20,4 +21,5 @@ The tutorial chapter covers the following content up to now:
    :maxdepth: 2
 
    docker_env
+   periph_config
 

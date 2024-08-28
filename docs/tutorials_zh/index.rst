@@ -7,6 +7,9 @@
 
 * :ref:`tutorial_docker_env_zh`:本教程介绍如何在机载计算机中为 Pursuit autopilot 部署 docker 容器。
 
+* :ref:`tutorial_periph_config_zh`:本教程介绍如何为 Pursuit 自动驾驶仪配置各种外围设备。
+
+
 
 **中等级别**
 
@@ -16,6 +19,8 @@
    :maxdepth: 2
 
    docker_env_zh
+   periph_config_zh
+
 
 
 
