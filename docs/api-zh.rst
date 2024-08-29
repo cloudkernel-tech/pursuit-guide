@@ -86,11 +86,45 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
 2. pursuit_msgs包
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-定制消息可以在 `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_ 查阅，它们的含义在定义中很容易理解。
+定制消息可以在 `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_ 查阅，它们的含义在定义中很容易理解。例如，下面是VcuBaseStatus消息的信息，它主要反映
+无人车底盘的状态，包括转向角，前向速度，转向角速度等，根据不同车型有效状态是不同的
+
+::
+
+        # Base type definitions
+        uint8 VCU_BASE_TYPE_UNDEFINED = 0
+        uint8 VCU_BASE_TYPE_ACKERMANN = 1
+        uint8 VCU_BASE_TYPE_DDRIVE_4WHEELS = 2
+
+        # Gear position definitions
+        uint8 VCU_GEAR_POSITION_UNDEFINED = 0   # undefined
+        uint8 VCU_GEAR_POSITION_P = 1   # pause/stop
+        uint8 VCU_GEAR_POSITION_R = 2   # recede
+        uint8 VCU_GEAR_POSITION_N = 3   # null
+        uint8 VCU_GEAR_POSITION_D = 4   # forward
+
+        # Operating mode definitions
+        uint8 VCU_OPERATING_MODE_AUTO = 0
+        uint8 VCU_OPERATING_MODE_REMOTE = 1
+        uint8 VCU_OPERATING_MODE_STOP = 2
+
+        std_msgs/Header 	header
+
+        uint8       vcu_base_type         # vcu base type
+        uint8       gear_position         # current gear position
+        float32     speed                 # current moving speed, unit: m/s, positive value only
+        bool        steering_angle_valid    # valid flag for steering angle
+        float32     steering_angle          # steering angle in radians
+        bool        twist_valid
+        float32[3]  vel                     # velocity along body axes (m/s)
+        bool        heading_rate_valid
+        float32     heading_rate            # heading rate (rad/s)
+
+        uint8       operating_mode          # current operating mode
 
 
 
 3. mavros包
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-mavros 包源自 PX4 社区（'<http://wiki.ros.org/mavros>'_）。我们为 Pursuit 自动驾驶仪添加了自定义消息。大多数消息都可以在官方的 mavros wiki 页面上查阅，这里列举我们常用的部分。
+mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 Pursuit 自动驾驶仪添加了自定义消息。大多数消息都可以在官方的 mavros wiki 页面上查阅，这里列举我们常用的部分。

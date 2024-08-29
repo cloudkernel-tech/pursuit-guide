@@ -87,7 +87,42 @@ The ROS API for Pursuit autopilot is implemented in ROS packages, and we maintai
 2. pursuit_msgs package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The customized messages can be referred in `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_, and they are self-explanatory in corresponding definitions.
+The customized messages can be referred in `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_, and they are self-explanatory in corresponding definitions. For instance,
+the content of VcuBaseStatus message is shown below, which contains the VCU status of the AGV chassis such as steering angle, forward speed, heading rate, etc. The valid fields are
+dependent on the vehicle type.
+
+::
+
+        # Base type definitions
+        uint8 VCU_BASE_TYPE_UNDEFINED = 0
+        uint8 VCU_BASE_TYPE_ACKERMANN = 1
+        uint8 VCU_BASE_TYPE_DDRIVE_4WHEELS = 2
+
+        # Gear position definitions
+        uint8 VCU_GEAR_POSITION_UNDEFINED = 0   # undefined
+        uint8 VCU_GEAR_POSITION_P = 1   # pause/stop
+        uint8 VCU_GEAR_POSITION_R = 2   # recede
+        uint8 VCU_GEAR_POSITION_N = 3   # null
+        uint8 VCU_GEAR_POSITION_D = 4   # forward
+
+        # Operating mode definitions
+        uint8 VCU_OPERATING_MODE_AUTO = 0
+        uint8 VCU_OPERATING_MODE_REMOTE = 1
+        uint8 VCU_OPERATING_MODE_STOP = 2
+
+        std_msgs/Header 	header
+
+        uint8       vcu_base_type         # vcu base type
+        uint8       gear_position         # current gear position
+        float32     speed                 # current moving speed, unit: m/s, positive value only
+        bool        steering_angle_valid    # valid flag for steering angle
+        float32     steering_angle          # steering angle in radians
+        bool        twist_valid
+        float32[3]  vel                     # velocity along body axes (m/s)
+        bool        heading_rate_valid
+        float32     heading_rate            # heading rate (rad/s)
+
+        uint8       operating_mode          # current operating mode
 
 
 3. mavros package
