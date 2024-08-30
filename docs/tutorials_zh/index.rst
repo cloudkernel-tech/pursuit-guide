@@ -11,6 +11,7 @@
 
 * :ref:`tutorial_docker_env_zh`:本教程介绍如何在机载计算机中为 Pursuit autopilot 部署 docker 容器。
 
+* :ref:`tutorial_ros_driver`: 本教程介绍了使用两个 ROS 驱动程序访问 Pursuit 自动驾驶仪的步骤。
 
 **中等级别**
 
