@@ -46,6 +46,9 @@ To view the VCU status, simply try:
         listener vcu_base_status    # display the vcu base status
         listener vcu_control_cmd    # display the command sent to the vcu base
 
+Users can also test the AGV chassis with simple maneuvers by:
+
+        vcu_bridge test
 
 
 RTK Layer Status

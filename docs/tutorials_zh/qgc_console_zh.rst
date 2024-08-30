@@ -44,6 +44,10 @@ AGV 底盘的 VCU 单元通过 CAN 总线连接到自动驾驶仪。
         listener vcu_base_status    # display the vcu base status
         listener vcu_control_cmd    # display the command sent to the vcu base
 
+用户也可以通过指令使底盘进行简单运动测试：
+
+        vcu_bridge test
+
 
 RTK定位状态
 ------------------

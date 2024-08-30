@@ -25,6 +25,7 @@
    periph_config_zh
    qgc_console_zh
    docker_env_zh
+   ros_driver_zh
 
 
 

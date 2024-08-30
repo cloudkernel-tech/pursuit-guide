@@ -9,7 +9,9 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_qgc_console`: This tutorial illustrates various commands in QGroundcontrol software to monitor system status.
 
-* :ref:`tutorial_docker_env`: This tutorial illustrates how to deploy a docker container for Pursuit autopilot in a companion computer.
+* :ref:`tutorial_docker_env`:  This tutorial presents how to deploy a docker container for Pursuit autopilot in a companion computer.
+
+* :ref:`tutorial_ros_driver`:  This tutorial describes steps to access the Pursuit autopilot with two ROS drivers.
 
 
 **Intermediate Level**
@@ -24,4 +26,5 @@ The tutorial chapter covers the following content up to now:
    periph_config
    qgc_console
    docker_env
+   ros_driver
 

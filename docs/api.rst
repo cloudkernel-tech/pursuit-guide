@@ -1,3 +1,5 @@
+.. _section_api_en:
+
 Application Programming Interface (API)
 ==========================================
 
