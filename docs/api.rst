@@ -133,6 +133,60 @@ dependent on the vehicle type.
 The mavros package originates from the PX4 community (`<http://wiki.ros.org/mavros>`_). We add customized messages for the Pursuit autopilot. Most messages can be referred in the official mavros wiki page,
 and we only list those that are commonly used in our case.
 
+(1) Subscribed topics
+""""""""""""""""""""""""
+- ~mavros/setpoint_position/local (`geometry_msgs/PoseStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseStamped.html>`_)
+
+    The position setpoint expressed in the local frame that is sent to the autopilot (**enabled in offboard mode only**)
+
+- ~mavros/setpoint_velocity/cmd_vel (`geometry_msgs::TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    The velocity setpoint expressed in the local frame that is sent to the autopilot (**enabled in offboard mode only**)
+
+- ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)
 
 
+(2) Published topics
+""""""""""""""""""""""""
 
+- ~mavros/state (`mavros_msgs/State <http://docs.ros.org/en/api/mavros_msgs/html/msg/State.html>`_)
+
+        The state of the autopilot, including arming status, mode, connection state, etc.
+
+- ~mavros/global_position/global (`sensor_msgs/NavSatFix <http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html>`_)
+
+        GPS global position and satellite status for the vehicle.
+
+- ~mavros/local_position/pose ( `geometry_msgs::PoseStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html>`_):
+
+        The local position and attitude of the vehicle expressed in ENU (East-North_Up) frame when the vehicle localization is ready after GPS lock.
+
+- ~mavros/local_position/velocity (`geometry_msgs/TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/TwistStamped.html>`_)
+
+        Velocity data from the autopilot.
+
+- ~mavros/imu/data_raw (`sensor_msgs/Imu <http://docs.ros.org/en/api/sensor_msgs/html/msg/Imu.html>`_)
+
+        Raw IMU data without orientation, including accelerometer and gyroscope data.
+
+- ~mavros/vcu_base_status/output (`pursuit_msgs::VcuBaseStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBaseStatus.msg>`_):
+
+        The state of VCU base in the ground vehicle.
+
+- ~mavros/vcu_command_velocity/output (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
+
+        The velocity command sent to the VCU base by the Pursuit autopilot.
+
+
+(3) Services
+""""""""""""""""""""""""""""
+
+- ~mavros/set_mode (`mavros_msgs/SetMode <http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html>`_)
+
+        Set the operation mode for the autopilot, including offboard, mission and stabilized modes.
+
+- ~mavros/cmd/arming (`mavros_msgs/CommandBool <http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html>`_)
+
+        Change arming status from the companion computer, e.g. armed/disarmed switching.
