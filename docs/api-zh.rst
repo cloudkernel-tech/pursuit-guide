@@ -15,20 +15,18 @@ ROS API (C++)
 
 Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个包：
 
-- **pursuit_driver** (main branch): 通过串行通信与自动驾驶仪接口的ROS包，仓库地址：`<https://gitee.com/cloudkernel-tech/pursuit_driver>`_
+- **pursuit_driver** (main 分支): 通过串行通信与自动驾驶仪接口的ROS包，仓库地址：`<https://gitee.com/cloudkernel-tech/pursuit_driver>`_
 
-- **pursuit_msgs** (main branch): 定制的Pursuit消息，仓库地址： `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
+- **pursuit_msgs** (main 分支): 定制的Pursuit消息，仓库地址： `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
 
-- **mavros** (dev_pursuit_agv branch)：为Pursuit自动驾驶仪定制的mavros包，它是与自驾仪交互的另外一个包，只适合高级开发者使用，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
+- **mavros** (dev_pursuit_agv 分支)：为Pursuit自动驾驶仪定制的mavros包，它是与自驾仪交互的另外一个包，只适合高级开发者使用，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
 
 
 1. pursuit_driver包
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-(1) Subscribed topics
+(1) 订阅话题
 """"""""""""""""""""""
-
-
 
 **以下话题仅用于产品发布，开发者不建议使用**
 
@@ -45,7 +43,7 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
     导航模块生成的平滑速度命令，将被发送到Pursuit自动驾驶仪。
 
 
-(2) Published topics
+(2) 发布话题
 """"""""""""""""""""""""
 
 - ~pursuit_driver/ackermann_drive_cmd ( `ackermann_msgs::AckermannDriveStamped <https://docs.ros.org/en/melodic/api/ackermann_msgs/html/msg/AckermannDriveStamped.html>`_ ):
@@ -130,3 +128,62 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 Pursuit 自动驾驶仪添加了自定义消息。大多数消息都可以在官方的 mavros wiki 页面上查阅，这里列举我们常用的部分。
+
+
+(1) 订阅话题
+""""""""""""""""""""""""
+- ~mavros/setpoint_position/local (`geometry_msgs/PoseStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseStamped.html>`_)
+
+    发送到自驾仪的ENU坐标系目标位置值（**仅在 offboard 模式下启用**）
+
+- ~mavros/setpoint_velocity/cmd_vel (`geometry_msgs::TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    发送到自驾仪的ENU坐标系目标速度值（**仅在 offboard 模式下启用**）
+
+- ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    发送到自驾仪的体坐标系下的线速度和角速度命令 （**仅在 offboard 模式下启用**）
+
+
+(2) 发布话题
+""""""""""""""""""""""""
+
+- ~mavros/state (`mavros_msgs/State <http://docs.ros.org/en/api/mavros_msgs/html/msg/State.html>`_)
+
+        自动驾驶仪的状态，包括解锁/上锁状态、模式、连接状态等。
+
+- ~mavros/global_position/global (`sensor_msgs/NavSatFix <http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html>`_)
+
+        机器的 GPS 全球位置和卫星状态。
+
+- ~mavros/local_position/pose ( `geometry_msgs::PoseStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html>`_):
+
+        当GPS 锁定后车辆定位准备就绪时，车辆在ENU坐标系下的位置和姿态。
+
+- ~mavros/local_position/velocity (`geometry_msgs/TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/TwistStamped.html>`_)
+
+        车辆ENU坐标系下的速度信息。
+
+- ~mavros/imu/data_raw (`sensor_msgs/Imu <http://docs.ros.org/en/api/sensor_msgs/html/msg/Imu.html>`_)
+
+        无方向的原始 IMU 数据，包括加速度计和陀螺仪数据。
+
+- ~mavros/vcu_base_status/output (`pursuit_msgs::VcuBaseStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBaseStatus.msg>`_):
+
+       地面车辆中 VCU 底盘控制单元的状态。
+
+- ~mavros/vcu_command_velocity/output (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
+
+        自动驾驶仪发送到 VCU底盘控制单元的速度命令。
+
+
+(3) 服务
+""""""""""""""""""""""""""""
+
+- ~mavros/set_mode (`mavros_msgs/SetMode <http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html>`_)
+
+        设置自动驾驶仪的操作模式，包括在线控制模式、航路店模式和自稳手动模式。
+
+- ~mavros/cmd/arming (`mavros_msgs/CommandBool <http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html>`_)
+
+       从机载计算机更改锁定状态，例如上锁/解锁切换。
