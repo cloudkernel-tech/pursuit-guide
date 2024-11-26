@@ -13,10 +13,9 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_ros_driver`:  This tutorial describes steps to access the Pursuit autopilot with two ROS drivers.
 
+* :ref:`tutorial_firmware_upgrade`:  This tutorial shows how to upgrade the firmware of the Pursuit autopilot remotely.
 
 **Intermediate Level**
-
-
 
 
 .. toctree::
@@ -27,4 +26,5 @@ The tutorial chapter covers the following content up to now:
    qgc_console
    docker_env
    ros_driver
+   firmware_upgrade
 
