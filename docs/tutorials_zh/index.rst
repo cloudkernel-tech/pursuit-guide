@@ -13,6 +13,9 @@
 
 * :ref:`tutorial_ros_driver_zh`: 本教程介绍了使用两个 ROS 驱动程序访问 Pursuit 自动驾驶仪的步骤。
 
+* :ref:`tutorial_firmware_upgrade_zh`: 本教程说明了如何对自驾仪进行远程固件升级。
+
+
 **中等级别**
 
 
@@ -27,6 +30,7 @@
    qgc_console_zh
    docker_env_zh
    ros_driver_zh
+   firmware_upgrade_zh
 
 
 
