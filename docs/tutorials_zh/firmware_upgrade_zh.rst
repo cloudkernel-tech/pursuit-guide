@@ -30,7 +30,7 @@ Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的
         # start the app with command
         ./QGC_3.5.6_kerloud_202411.AppImage
 
-- 选择 设置 菜单下的 固件 选项卡，然后通过 Micro USB 电缆连接到 Pursuit 自动舵。点击右侧的 高级设置 ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“确定”按钮来触发自动升级过程。
+- 选择 设置 菜单下的 固件 选项卡，然后通过 Micro USB 电缆连接到 Pursuit 自驾仪。点击右侧的 高级设置 ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“确定”按钮来触发自动升级过程。
 
 .. image:: ../img/firmware_upgrade/qgc_upgrade.png
    :height: 350 px
