@@ -11,15 +11,13 @@ Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的
 
 - 在 Ubuntu 18.04 主机上下载 QGroundcontrol 软件。
 
-- 在终端中运行以下命令以正确设置环境。
+- 在终端中运行以下命令以正确设置环境，完成后需重启计算机使设置生效。
 
 ::
 
         sudo usermod -a -G dialout $USER
         sudo apt-get remove modemmanager -y
         sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
-
-        # Then logout and login again to enable the change to user permissions.
 
         chmod +x ./QGC_3.5.6_kerloud_202411.AppImage
 
@@ -30,7 +28,7 @@ Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的
         # start the app with command
         ./QGC_3.5.6_kerloud_202411.AppImage
 
-- 选择 设置 菜单下的 固件 选项卡，然后通过 Micro USB 电缆连接到 Pursuit 自驾仪。点击右侧的 高级设置 ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“确定”按钮来触发自动升级过程。
+- 选择 设置 菜单下的 固件 选项卡。 断开自驾仪的直流电源，然后通过Micro USB线连接到计算机。点击右侧的 高级设置（Advanced settings） ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“OK”按钮来触发自动升级过程。
 
 .. image:: ../img/firmware_upgrade/qgc_upgrade.png
    :height: 350 px
