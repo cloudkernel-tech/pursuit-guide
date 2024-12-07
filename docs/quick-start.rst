@@ -16,7 +16,7 @@ Mission Mode (For Users)
     - Provide power to the host computer and power the autopilot using the vehicle's 12V DC power supply.
 
 
-#. Start the Onboard Computer ROS Nodes
+#. Start the Onboard Computer ROS Nodes (required for Model A+ or above)
 
     For machines officially configured by us, the onboard computer will automatically run the relevant nodes after startup,
     which is dependent on product options. For models with RTK navigation and automatic obstacle avoidance functions, users can also use a convenient script to execute them.
