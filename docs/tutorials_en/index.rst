@@ -17,6 +17,10 @@ The tutorial chapter covers the following content up to now:
 
 **Intermediate Level**
 
+* :ref:`tutorial_offboard_cplus`: This tutorial introduces how to utilize API interface in offboard control mode with C++ programming and ROS.
+
+* :ref:`tutorial_sitl_sim`: This tutorial describes how to employ our proprietary simulation environment to accelerate software validation workflow.
+
 
 .. toctree::
    :hidden:
@@ -27,4 +31,6 @@ The tutorial chapter covers the following content up to now:
    docker_env
    ros_driver
    firmware_upgrade
+   offboard_cplus
+   sim_env
 
