@@ -139,10 +139,6 @@ and we only list those that are commonly used in our case.
 
     The position setpoint expressed in the ENU frame that is sent to the autopilot (**enabled in offboard mode only**)
 
-- ~mavros/setpoint_velocity/cmd_vel (`geometry_msgs::TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html>`_)
-
-    The velocity setpoint expressed in the ENU frame that is sent to the autopilot (**enabled in offboard mode only**)
-
 - ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
 
     The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)

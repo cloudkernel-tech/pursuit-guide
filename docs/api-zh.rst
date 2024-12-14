@@ -136,10 +136,6 @@ mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 P
 
     发送到自驾仪的ENU坐标系目标位置值（**仅在 offboard 模式下启用**）
 
-- ~mavros/setpoint_velocity/cmd_vel (`geometry_msgs::TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html>`_)
-
-    发送到自驾仪的ENU坐标系目标速度值（**仅在 offboard 模式下启用**）
-
 - ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
 
     发送到自驾仪的体坐标系下的线速度和角速度命令 （**仅在 offboard 模式下启用**）
