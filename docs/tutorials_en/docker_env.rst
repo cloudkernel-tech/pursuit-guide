@@ -13,6 +13,8 @@ release them to public when the software components reach the mature status.
 About Docker
 ---------------------
 
+**Note: This tutorial is applicable only for Model A+ or above**
+
 Docker is an open-source containerization platform that allows developers to package their applications and their dependencies into a portable container
 and then publish it to run on any Docker-enabled machine without worrying about environment variables and dependencies. A container is a lightweight,
 platform-independent package that contains an application and its dependencies that can run in any environment. Docker uses container technology to
