@@ -1,9 +1,9 @@
 Introduction
 ===============
 
-.. image:: img/intro/Pursuit_A_Plus_kit.png
-   :height: 550 px
-   :width: 750 px
+.. image:: img/modelA+_2024.png
+   :height: 450 px
+   :width: 800 px
    :scale: 60 %
    :align: center
 

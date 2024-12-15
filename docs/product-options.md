@@ -28,7 +28,7 @@ Supports waypoints, points and high-precision patrol line control, suitable for 
 
 ## Model A+
 
-![Image](img/model-A_plus_view.png)
+![Image](img/modelA+_2024.png)
 
 ### Specifications
 

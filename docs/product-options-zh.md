@@ -28,7 +28,7 @@
 
 ## Model A+ 款型
 
-![Image](img/model-A_plus_view.png)
+![Image](img/modelA+_2024.png)
 
 ### 规格参数
 
