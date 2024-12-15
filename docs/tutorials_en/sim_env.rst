@@ -1,7 +1,7 @@
 .. _tutorial_sitl_sim:
 
-Simulation Environment to Accelerate Software Validation
-================================================================
+Simulation Environment for Software Validation
+=================================================
 
 
 
