@@ -7,7 +7,7 @@ We provide customized docker images to facilitate software development with the 
 include two folds: it alleviates the need to setup the tedious environment for product release, and software stability can also be
 guaranteed as the docker container is isolated from the operating system in the host computer.
 
-We maintain docker images for x86 and arm architectures only, and currently they are delivered to our customers with our products. We'll
+We maintain docker images for amd64 and arm64 architectures only, and currently they are delivered to our customers with our products. We'll
 release them to public when the software components reach the mature status.
 
 About Docker

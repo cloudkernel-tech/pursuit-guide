@@ -18,9 +18,9 @@
 
 **中等级别**
 
+* :ref:`tutorial_offboard_cplus_zh`:本教程介绍如何通过 C++ 编程和 ROS 在 offboard 控制模式下使用 API 接口。
 
-
-
+* :ref:`tutorial_sitl_sim_zh`: 本教程介绍了如何利用我们专有的仿真环境来加速软件验证工作流程。
 
 .. toctree::
    :hidden:
@@ -31,6 +31,8 @@
    docker_env_zh
    ros_driver_zh
    firmware_upgrade_zh
+   offboard_cplus_zh
+   sim_env_zh
 
 
 
