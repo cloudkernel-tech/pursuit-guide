@@ -15,8 +15,9 @@
 
 * :ref:`tutorial_firmware_upgrade_zh`: 本教程说明了如何对自驾仪进行远程固件升级。
 
-
 **中等级别**
+
+* :ref:`tutorial_open_can_protocol_zh`: 本教程记录了用于定制AGV底盘集成的开放式CAN协议。
 
 * :ref:`tutorial_offboard_cplus_zh`:本教程介绍如何通过 C++ 编程和 ROS 在 offboard 控制模式下使用 API 接口。
 
@@ -31,6 +32,7 @@
    docker_env_zh
    ros_driver_zh
    firmware_upgrade_zh
+   chassis_can_protocol_zh
    offboard_cplus_zh
    sim_env_zh
 
