@@ -58,7 +58,7 @@ Pursuit 自动驾驶仪支持 CAN 2.0B（扩展格式）协议，该协议明细
 
 #. **Steering Control Command （转向控制消息）**
 
-This command is an alternative command message that follows the Ackermann convention.
+这个指令可以仿照阿卡曼车型习惯对底盘进行控制。
 
     .. image:: ../img/can_protocol/4w4d_steering_ctrl_cmd_msg_zh.png
        :width: 750 px
@@ -68,7 +68,7 @@ This command is an alternative command message that follows the Ackermann conven
 
 #. **4WS-4WD Control Feedback Command（四转四驱控制反馈消息）**
 
-This message is used together with 4WS-4WD Control Command.
+这个指令与 4WS-4WD Control Command一同使用.
 
     .. image:: ../img/can_protocol/4w4d_ctrl_fb_msg_zh.png
        :width: 750 px
@@ -78,7 +78,7 @@ This message is used together with 4WS-4WD Control Command.
 
 #. **Steering Control Feedback Command（转向控制反馈消息）**
 
-This message is used together with Steering Control Command.
+这个指令与 Steering Control Command一同使用.
 
     .. image:: ../img/can_protocol/4w4d_steering_ctrl_fb_msg_zh.png
        :width: 750 px
