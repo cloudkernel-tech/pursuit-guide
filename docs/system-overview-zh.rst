@@ -1,10 +1,10 @@
 系统总览
 ====================
 
-.. image:: img/Model_A_Plus_Port.png
+.. image:: img/pursuit_vew2024.png
    :height: 400 px
    :width: 400 px
-   :scale: 90%
+   :scale: 100%
    :align: center
 
 Pursuit自动驾驶仪是一款集成度高、功能全面的导航套件，主要由以下几个核心组件构成：

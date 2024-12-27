@@ -1,10 +1,10 @@
 System Overview
 =======================
 
-.. image:: img/Model_A_Plus_Port.png
+.. image:: img/pursuit_vew2024.png
    :height: 400 px
    :width: 400 px
-   :scale: 90%
+   :scale: 100%
    :align: center
 
 Pursuit autopilot is a highly integrated and fully functional navigation kit, mainly composed of the following core components:
