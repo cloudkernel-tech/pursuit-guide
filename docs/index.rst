@@ -12,6 +12,15 @@ Welcome to the Developer Guide of Pursuit Autopilot
    :scale: 100 %
    :align: center
 
+
+.. raw:: html
+
+   <center> <span style="font-size: 1.2em;"> An open collaborative solution to build your self-driving business in agriculture and inspection</center>
+
+   <center> <span style="font-size: 1.2em;"> 一款可以帮助你建立农业和巡检无人驾驶业务的开放式自驾仪</center>
+
+   <br><br>
+
 Motivation
 --------------
 
