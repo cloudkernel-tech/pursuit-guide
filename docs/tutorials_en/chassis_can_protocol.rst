@@ -38,6 +38,8 @@ Messages for Ackermann Chassis
 
 #. **Control Feedback Command**
 
+The message shall be used together with the Steering Control Command, and it's sent from the chassis to the autopilot.
+
     .. image:: ../img/can_protocol/acker_steering_ctrl_fb_msg.png
        :width: 700 px
        :height: 700 px
@@ -57,27 +59,11 @@ The 4WS-4WD (Four-Wheel Steering and Four-Wheel Drive) chassis is featured with 
        :scale: 100 %
        :align: center
 
-#. **Steering Control Command**
-
-    .. image:: ../img/can_protocol/4W4D_steering_ctrl_cmd_msg.png
-       :width: 700 px
-       :height: 700 px
-       :scale: 100 %
-       :align: center
-
 #. **4W4D Control Feedback Command**
 
+The message shall be used together with the 4WS-4WD Control Command, and it's sent from the chassis to the autopilot.
+
     .. image:: ../img/can_protocol/4W4D_ctrl_fb_msg.png
-       :width: 700 px
-       :height: 700 px
-       :scale: 100 %
-       :align: center
-
-#. **Steering Control Feedback Command**
-
-This message is used together with Steering Control Command.
-
-    .. image:: ../img/can_protocol/4W4D_steering_ctrl_fb_msg.png
        :width: 700 px
        :height: 700 px
        :scale: 100 %
