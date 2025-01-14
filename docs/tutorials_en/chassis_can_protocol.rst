@@ -24,6 +24,11 @@ The configuration for our CAN protocol is:
 - Time Segment 2 (TSEQ2): 3
 - Synchronization Jump Width (SJW): 2
 
+.. Hint::
+
+        Note that we utilize the FLU frame for velocities and steering angles in the protocol, namely X (Front), Y (Left), Z (Up), and the steering angle is positive when turning left.
+
+
 Messages for Ackermann Chassis
 ----------------------------------
 
