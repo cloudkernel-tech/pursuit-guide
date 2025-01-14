@@ -37,7 +37,7 @@ can easily boot their computers from the thumbdrive following the user manual.
 
 .. raw:: html
 
-    <center> (b) Simulation for a ground vehicle in clustered environment
+    <center> (b) Simulation for a ground vehicle in cluttered environment
     </center>
    <br><br>
 
@@ -71,7 +71,7 @@ the catkinws_nav workspace must be in the same directory (~/pursuit_space) so th
         roslaunch launch/mavros_posix_sitl_pursuit_base.launch
 
 
-Case 3: Offboard control in outdoor clustered environment with 2D lidar
+Case 3: Offboard control in outdoor cluttered environment with 2D lidar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We also support the simulation of ground vehicles equipped with 2D lidar, which is the main feature for our model A+. The launch file below

@@ -34,7 +34,7 @@
 
 .. raw:: html
 
-    <center> (b) Simulation for a ground vehicle in clustered environment
+    <center> (b) Simulation for a ground vehicle in cluttered environment
     </center>
    <br><br>
 
