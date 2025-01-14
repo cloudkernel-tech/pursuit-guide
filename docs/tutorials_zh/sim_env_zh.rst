@@ -68,7 +68,7 @@ catkinws_nav工作区必须位于同一目录（~/pursuit_space）中，以便 s
         roslaunch launch/mavros_posix_sitl_pursuit_base.launch
 
 
-Case 3: 使用 2D 激光雷达在室外集群环境中进行 Offboard 控制
+Case 3: 使用 2D 激光雷达在室外有障碍物环境中进行 Offboard 控制
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 我们还支持对配备 2D 激光雷达的地面车辆进行仿真，这是我们 Model A+ 的主要特点。下面的启动文件可以激活 2D 激光雷达及其对应的 ROS 主题。
