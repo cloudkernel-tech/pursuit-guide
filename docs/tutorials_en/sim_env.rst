@@ -59,6 +59,12 @@ This is the simplest simulation case that can be brought up by:
 
 Users can then operate the ground vehicle in QGroundcontrol software.
 
+.. raw:: html
+
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113858693893873&bvid=BV1ApwUegEJY&cid=27970373871&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
+
+
 Case 2: Offboard control with GPS navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

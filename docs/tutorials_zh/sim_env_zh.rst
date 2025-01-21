@@ -56,6 +56,12 @@ Case 1: 使用 GPS 导航的空旷环境
 
 然后用户可以在 QGroundcontrol 软件中操作地面车辆。
 
+.. raw:: html
+
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113858693893873&bvid=BV1ApwUegEJY&cid=27970373871&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
+
+
 Case 2: 带 GPS 导航的 Offboard 控制
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
