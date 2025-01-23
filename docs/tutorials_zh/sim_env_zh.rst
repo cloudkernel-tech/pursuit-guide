@@ -21,7 +21,7 @@
 
 .. raw:: html
 
-    <center> (a) Simulation for a ground vehicle in empty environment
+    <center> (a) Simulation for a ground vehicle in an empty environment
     </center>
    <br><br>
 
@@ -34,7 +34,7 @@
 
 .. raw:: html
 
-    <center> (b) Simulation for a ground vehicle in cluttered environment
+    <center> (b) Simulation for a ground vehicle in a cluttered environment
     </center>
    <br><br>
 
@@ -72,6 +72,11 @@ catkinws_nav工作区必须位于同一目录（~/pursuit_space）中，以便 s
 
         source setup_pursuit.bash
         roslaunch launch/mavros_posix_sitl_pursuit_base.launch
+
+.. raw:: html
+
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113875705922948&bvid=BV1i9fBY4EvL&cid=28028109787&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
 
 
 Case 3: 使用 2D 激光雷达在室外有障碍物环境中进行 Offboard 控制

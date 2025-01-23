@@ -24,7 +24,7 @@ can easily boot their computers from the thumbdrive following the user manual.
 
 .. raw:: html
 
-    <center> (a) Simulation for a ground vehicle in empty environment
+    <center> (a) Simulation for a ground vehicle in an empty environment
     </center>
    <br><br>
 
@@ -37,7 +37,7 @@ can easily boot their computers from the thumbdrive following the user manual.
 
 .. raw:: html
 
-    <center> (b) Simulation for a ground vehicle in cluttered environment
+    <center> (b) Simulation for a ground vehicle in a cluttered environment
     </center>
    <br><br>
 
@@ -75,6 +75,12 @@ the catkinws_nav workspace must be in the same directory (~/pursuit_space) so th
 
         source setup_pursuit.bash
         roslaunch launch/mavros_posix_sitl_pursuit_base.launch
+
+
+.. raw:: html
+
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113875705922948&bvid=BV1i9fBY4EvL&cid=28028109787&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
 
 
 Case 3: Offboard control in outdoor cluttered environment with 2D lidar
