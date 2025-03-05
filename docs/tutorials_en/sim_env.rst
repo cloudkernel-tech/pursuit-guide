@@ -94,4 +94,8 @@ can activate 2D lidar and its corresponding ROS topics. Users have to set GND_RM
         source setup_pursuit.bash
         roslaunch launch/mavros_posix_sitl_pursuit_base_rplidar.launch
 
+.. raw:: html
+
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114104480107634&bvid=BV1gX9HYxEit&cid=28689631363&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
 

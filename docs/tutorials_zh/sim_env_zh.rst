@@ -91,7 +91,10 @@ Case 3: 使用 2D 激光雷达在室外有障碍物环境中进行 Offboard 控�
         roslaunch launch/mavros_posix_sitl_pursuit_base_rplidar.launch
 
 
+.. raw:: html
 
+    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114104480107634&bvid=BV1gX9HYxEit&cid=28689631363&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="95%" height="450">
+    </iframe>
 
 
 
