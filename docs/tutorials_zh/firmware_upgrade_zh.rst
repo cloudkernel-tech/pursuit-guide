@@ -6,6 +6,7 @@
 
 Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的改进。 使用我们在此处发布的定制 QGroundcontrol 软件 (`<https://github.com/cloudkernel-tech/qgroundcontrol/releases/download/v0.2.1/QGC_3.5.6_kerloud_202411.AppImage>`_)，可以轻松进行升级
 
+用户可以在此链接 `<https://github.com/cloudkernel-tech/qgroundcontrol/releases>`_ 寻找最新的版本，以支持windows 11系统。
 
 升级步骤如下：
 
@@ -28,7 +29,7 @@ Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的
         # start the app with command
         ./QGC_3.5.6_kerloud_202411.AppImage
 
-- 选择 设置 菜单下的 固件 选项卡。 断开自驾仪的直流电源，然后通过Micro USB线连接到计算机。点击右侧的 高级设置（Advanced settings） ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“OK”按钮来触发自动升级过程。
+- 选择 设置 菜单下的 固件 选项卡。 断开自驾仪的直流电源，然后通过Micro USB线将自驾仪的debug口连接到计算机。点击右侧的 高级设置（Advanced settings） ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“OK”按钮来触发自动升级过程。
 
 .. image:: ../img/firmware_upgrade/qgc_upgrade.png
    :height: 350 px

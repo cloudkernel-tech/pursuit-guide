@@ -7,6 +7,8 @@ The firmware of the Pursuit autopilot can be upgraded to ensure the software sta
 The upgrade process is easy to conduct with our customized QGroundcontrol software released here
 (`<https://github.com/cloudkernel-tech/qgroundcontrol/releases/download/v0.2.1/QGC_3.5.6_kerloud_202411.AppImage>`_).
 
+For latest release that supports windows 11, users can refer to `<https://github.com/cloudkernel-tech/qgroundcontrol/releases>`_.
+
 The steps for upgrade are as follows:
 
 - Download the QGroundcontrol software in a Ubuntu 18.04 host computer.
@@ -28,7 +30,7 @@ The steps for upgrade are as follows:
         # start the app with command
         ./QGC_3.5.6_kerloud_202411.AppImage
 
-- Select the Firmware tab under the Setting menu. Disconnect the DC power for the autopilot and connect it to the computer via the provided Micro USB cable. Click the Advanced settings at the right side, and select the option "Pursuit autopilot release (Cloudkernel)". Then the automatic upgrade process can be triggered by clicking the "OK" button in the upper right corner.
+- Select the Firmware tab under the Setting menu. Disconnect the DC power for the autopilot and connect the debug port to the computer via the provided Micro USB cable. Click the Advanced settings at the right side, and select the option "Pursuit autopilot release (Cloudkernel)". Then the automatic upgrade process can be triggered by clicking the "OK" button in the upper right corner.
 
 .. image:: ../img/firmware_upgrade/qgc_upgrade.png
    :height: 350 px
