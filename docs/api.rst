@@ -16,15 +16,130 @@ ROS API (C++)
 
 The ROS API for Pursuit autopilot is implemented in ROS packages, and we maintain several packages as follows:
 
-- **pursuit_driver** (main branch): the ROS package to interface with the autopilot via serial communication, and the repository is released in `<https://gitee.com/cloudkernel-tech/pursuit_driver>`_
-
 - **pursuit_msgs** (main branch): customized pursuit messages, and the repository is released in `<https://gitee.com/cloudkernel-tech/pursuit_msgs>`_
 
-- **mavros** (dev_pursuit_agv branch) : the customized mavros package for pursuit autopilot, and it's an alternative method to interface with the autopilot (recommended for advanced developers only). The repository is released in `<https://gitee.com/cloudkernel-tech/mavros>`_.
+- **mavros** (dev_pursuit_agv branch, active) : the customized mavros package for pursuit autopilot, and it's the recommended method to interface with the autopilot (**recommended for experienced developers**). The repository is released in `<https://gitee.com/cloudkernel-tech/mavros>`_.
+
+- **pursuit_driver** (main branch, archived): the ROS package to interface with the autopilot via serial communication, and the repository is released in `<https://gitee.com/cloudkernel-tech/pursuit_driver>`_
 
 
-1. pursuit_driver node
+1. pursuit_msgs package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The customized messages can be referred in `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_, and they are self-explanatory in corresponding definitions. For instance,
+the content of VcuBaseStatus message is shown below, which contains the VCU status of the AGV chassis such as steering angle, forward speed, heading rate, etc. The valid fields are
+dependent on the vehicle type.
+
+::
+
+        # Base type definitions
+        uint8 VCU_BASE_TYPE_UNDEFINED = 0
+        uint8 VCU_BASE_TYPE_ACKERMANN = 1
+        uint8 VCU_BASE_TYPE_DDRIVE_4WHEELS = 2
+
+        # Gear position definitions
+        uint8 VCU_GEAR_POSITION_UNDEFINED = 0   # undefined
+        uint8 VCU_GEAR_POSITION_P = 1   # pause/stop
+        uint8 VCU_GEAR_POSITION_R = 2   # recede
+        uint8 VCU_GEAR_POSITION_N = 3   # null
+        uint8 VCU_GEAR_POSITION_D = 4   # forward
+
+        # Operating mode definitions
+        uint8 VCU_OPERATING_MODE_AUTO = 0
+        uint8 VCU_OPERATING_MODE_REMOTE = 1
+        uint8 VCU_OPERATING_MODE_STOP = 2
+
+        std_msgs/Header 	header
+
+        uint8       vcu_base_type         # vcu base type
+        uint8       gear_position         # current gear position
+        float32     speed                 # current moving speed, unit: m/s, positive value only
+        bool        steering_angle_valid    # valid flag for steering angle
+        float32     steering_angle          # steering angle in radians
+        bool        twist_valid
+        float32[3]  vel                     # velocity along body axes (m/s)
+        bool        heading_rate_valid
+        float32     heading_rate            # heading rate (rad/s)
+
+        uint8       operating_mode          # current operating mode
+
+
+2. mavros package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The mavros package originates from the PX4 community (`<http://wiki.ros.org/mavros>`_). We add customized messages for the Pursuit autopilot. Most messages can be referred in the official mavros wiki page,
+and we only list those that are commonly used in our case.
+
+(1) Subscribed topics
+""""""""""""""""""""""""
+- ~mavros/setpoint_position/local (`geometry_msgs/PoseStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseStamped.html>`_)
+
+    The position setpoint expressed in the ENU frame that is sent to the autopilot (**enabled in offboard mode only**)
+
+- ~mavros/setpoint_position/global (`geographic_msgs/GeoPoseStamped <https://docs.ros.org/en/melodic/api/geographic_msgs/html/msg/GeoPoseStamped.html>`_)
+
+    The position setpoint expressed with GPS coordinates that is sent to the autopilot (**enabled in offboard mode only**)
+
+- ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)
+
+
+(2) Published topics
+""""""""""""""""""""""""
+
+- ~mavros/state (`mavros_msgs/State <http://docs.ros.org/en/api/mavros_msgs/html/msg/State.html>`_)
+
+        The state of the autopilot, including arming status, mode, connection state, etc.
+
+- ~mavros/global_position/global (`sensor_msgs/NavSatFix <http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html>`_)
+
+        GPS global position and satellite status for the vehicle.
+
+- ~mavros/local_position/pose ( `geometry_msgs::PoseStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html>`_):
+
+        The local position and attitude of the vehicle expressed in ENU (East-North_Up) frame when the vehicle localization is ready after GPS lock.
+
+- ~mavros/local_position/velocity (`geometry_msgs/TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/TwistStamped.html>`_)
+
+        Velocity data from the autopilot.
+
+- ~mavros/imu/data_raw (`sensor_msgs/Imu <http://docs.ros.org/en/api/sensor_msgs/html/msg/Imu.html>`_)
+
+        Raw IMU data without orientation, including accelerometer and gyroscope data.
+
+- ~mavros/vcu_base_status/output (`pursuit_msgs::VcuBaseStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBaseStatus.msg>`_):
+
+        The state of VCU base in the ground vehicle.
+
+- ~mavros/vcu_bms_status/output (`pursuit_msgs::VcuBmsStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBmsStatus.msg>`_):
+
+        The VCU BMS (Battery Management System) state in the ground vehicle.
+
+- ~mavros/vcu_command_velocity/output (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
+
+        The velocity command sent to the VCU base by the Pursuit autopilot.
+
+
+(3) Services
+""""""""""""""""""""""""""""
+
+- ~mavros/set_mode (`mavros_msgs/SetMode <http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html>`_)
+
+        Set the operation mode for the autopilot, including offboard, mission and stabilized modes.
+
+- ~mavros/cmd/arming (`mavros_msgs/CommandBool <http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html>`_)
+
+        Change arming status from the companion computer, e.g. armed/disarmed switching.
+
+
+
+3. pursuit_driver node
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+.. caution::
+
+    The pursuit_driver package is archived and will not be maintained. Developers shall refer to the forementioned mavros package for more functionalities.
 
 (1) Subscribed topics
 """"""""""""""""""""""
@@ -83,106 +198,3 @@ The ROS API for Pursuit autopilot is implemented in ROS packages, and we maintai
 - ~pursuit_driver/vehicle_angular_velocity (`std_msgs::Float32MultiArray <https://docs.ros.org/en/melodic/api/std_msgs/html/msg/Float32MultiArray.html>`_):
 
         The attitude rate of the vehicle expressed in the ENU frame.
-
-
-
-2. pursuit_msgs package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The customized messages can be referred in `<https://gitee.com/cloudkernel-tech/pursuit_msgs/tree/main/msg>`_, and they are self-explanatory in corresponding definitions. For instance,
-the content of VcuBaseStatus message is shown below, which contains the VCU status of the AGV chassis such as steering angle, forward speed, heading rate, etc. The valid fields are
-dependent on the vehicle type.
-
-::
-
-        # Base type definitions
-        uint8 VCU_BASE_TYPE_UNDEFINED = 0
-        uint8 VCU_BASE_TYPE_ACKERMANN = 1
-        uint8 VCU_BASE_TYPE_DDRIVE_4WHEELS = 2
-
-        # Gear position definitions
-        uint8 VCU_GEAR_POSITION_UNDEFINED = 0   # undefined
-        uint8 VCU_GEAR_POSITION_P = 1   # pause/stop
-        uint8 VCU_GEAR_POSITION_R = 2   # recede
-        uint8 VCU_GEAR_POSITION_N = 3   # null
-        uint8 VCU_GEAR_POSITION_D = 4   # forward
-
-        # Operating mode definitions
-        uint8 VCU_OPERATING_MODE_AUTO = 0
-        uint8 VCU_OPERATING_MODE_REMOTE = 1
-        uint8 VCU_OPERATING_MODE_STOP = 2
-
-        std_msgs/Header 	header
-
-        uint8       vcu_base_type         # vcu base type
-        uint8       gear_position         # current gear position
-        float32     speed                 # current moving speed, unit: m/s, positive value only
-        bool        steering_angle_valid    # valid flag for steering angle
-        float32     steering_angle          # steering angle in radians
-        bool        twist_valid
-        float32[3]  vel                     # velocity along body axes (m/s)
-        bool        heading_rate_valid
-        float32     heading_rate            # heading rate (rad/s)
-
-        uint8       operating_mode          # current operating mode
-
-
-3. mavros package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The mavros package originates from the PX4 community (`<http://wiki.ros.org/mavros>`_). We add customized messages for the Pursuit autopilot. Most messages can be referred in the official mavros wiki page,
-and we only list those that are commonly used in our case.
-
-(1) Subscribed topics
-""""""""""""""""""""""""
-- ~mavros/setpoint_position/local (`geometry_msgs/PoseStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseStamped.html>`_)
-
-    The position setpoint expressed in the ENU frame that is sent to the autopilot (**enabled in offboard mode only**)
-
-- ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
-
-    The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)
-
-
-(2) Published topics
-""""""""""""""""""""""""
-
-- ~mavros/state (`mavros_msgs/State <http://docs.ros.org/en/api/mavros_msgs/html/msg/State.html>`_)
-
-        The state of the autopilot, including arming status, mode, connection state, etc.
-
-- ~mavros/global_position/global (`sensor_msgs/NavSatFix <http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html>`_)
-
-        GPS global position and satellite status for the vehicle.
-
-- ~mavros/local_position/pose ( `geometry_msgs::PoseStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html>`_):
-
-        The local position and attitude of the vehicle expressed in ENU (East-North_Up) frame when the vehicle localization is ready after GPS lock.
-
-- ~mavros/local_position/velocity (`geometry_msgs/TwistStamped <http://docs.ros.org/en/api/geometry_msgs/html/msg/TwistStamped.html>`_)
-
-        Velocity data from the autopilot.
-
-- ~mavros/imu/data_raw (`sensor_msgs/Imu <http://docs.ros.org/en/api/sensor_msgs/html/msg/Imu.html>`_)
-
-        Raw IMU data without orientation, including accelerometer and gyroscope data.
-
-- ~mavros/vcu_base_status/output (`pursuit_msgs::VcuBaseStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBaseStatus.msg>`_):
-
-        The state of VCU base in the ground vehicle.
-
-- ~mavros/vcu_command_velocity/output (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
-
-        The velocity command sent to the VCU base by the Pursuit autopilot.
-
-
-(3) Services
-""""""""""""""""""""""""""""
-
-- ~mavros/set_mode (`mavros_msgs/SetMode <http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html>`_)
-
-        Set the operation mode for the autopilot, including offboard, mission and stabilized modes.
-
-- ~mavros/cmd/arming (`mavros_msgs/CommandBool <http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html>`_)
-
-        Change arming status from the companion computer, e.g. armed/disarmed switching.
