@@ -6,7 +6,6 @@
 
 我们提供了两个 ROS 软件包来与 Pursuit 自动驾驶仪连接，如 API 部分所述。它们适用于不同的使用案例。`pursuit_driver <https://gitee.com/cloudkernel-tech/pursuit_driver>`_
 主要面向没有编程基础的终端用户，而 `mavros <https://gitee.com/cloudkernel-tech/mavros>`_ 包面向高级开发者设计，并支持物联网通信和机器人模拟等扩展功能。
-模拟。
 
 方式一： 使用pursuit_driver包
 --------------------------------
