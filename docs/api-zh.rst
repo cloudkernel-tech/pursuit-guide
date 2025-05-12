@@ -83,6 +83,10 @@ mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 P
 
     发送到自驾仪的体坐标系下的线速度和角速度命令 （**仅在 offboard 模式下启用**）
 
+- ~mavros/vcu_direct_can_ctrl/send (`pursuit_msgs::VcuDirectCanCtrl <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuDirectCanCtrl.msg>`_)
+
+    由自驾仪直接转发给底盘VCU的CAN消息，仅适用于底盘外设控制，不可用于运动控制
+
 
 (2) 发布话题
 """"""""""""""""""""""""

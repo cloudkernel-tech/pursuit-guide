@@ -84,6 +84,10 @@ and we only list those that are commonly used in our case.
 
     The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)
 
+- ~mavros/vcu_direct_can_ctrl/send (`pursuit_msgs::VcuDirectCanCtrl <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuDirectCanCtrl.msg>`_)
+
+    CAN control commands that will be forwarded to the VCU base directly.
+
 
 (2) Published topics
 """"""""""""""""""""""""
