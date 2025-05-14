@@ -85,7 +85,7 @@ mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 P
 
 - ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
 
-    该话题**仅供在线导航模块内部使用**。它还将twist控制命令发送给自动驾驶仪，但会将信号源标记为导航模块。
+    该话题**仅供在线导航模块内部使用**， 它会将twist控制命令发送给自动驾驶仪，但会将信号源标记为导航模块。
 
 - ~mavros/vcu_direct_can_ctrl/send (`pursuit_msgs::VcuDirectCanCtrl <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuDirectCanCtrl.msg>`_)
 
