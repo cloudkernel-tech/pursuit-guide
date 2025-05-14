@@ -80,9 +80,14 @@ and we only list those that are commonly used in our case.
 
     The position setpoint expressed with GPS coordinates that is sent to the autopilot (**enabled in offboard mode only**)
 
+- ~mavros/vcu_command_velocity/ctrl (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
+
+    The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot, used to direct twist control in the offboard mode (**enabled in offboard mode only**)
+
 - ~mavros/vcu_command_velocity/from_nav (`geometry_msgs::Twist <https://docs.ros.org/en/jade/api/geometry_msgs/html/msg/Twist.html>`_)
 
-    The command velocity (linear and angular velocities in the body frame) to be sent to the autopilot (**enabled in offboard mode only**)
+    The topic is **reserved for internal use only** for the online navigation module. It sends the twist control command to the autopilot as well but will mark the signal source as the
+navigation module.
 
 - ~mavros/vcu_direct_can_ctrl/send (`pursuit_msgs::VcuDirectCanCtrl <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuDirectCanCtrl.msg>`_)
 
