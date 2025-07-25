@@ -25,6 +25,8 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_rtk_onboard`: This tutorial illustrates how to feed the RTK signals from the onboard computer into the autopilot for high precision positioning.
 
+* :ref:`tutorial_mission_avoidance`: The tutorial demonstrates the setup procedure to enable the obstacle avoidance in the mission mode。
+
 .. toctree::
    :hidden:
    :maxdepth: 2
@@ -38,4 +40,6 @@ The tutorial chapter covers the following content up to now:
    rtk_onboard
    offboard_cplus
    sim_env
+   mission_avoidance
+
 
