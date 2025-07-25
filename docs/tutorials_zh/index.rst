@@ -23,6 +23,9 @@
 
 * :ref:`tutorial_sitl_sim_zh`: 本教程介绍了如何利用我们专有的仿真环境来加速软件验证工作流程。
 
+* :ref:`tutorial_rtk_onboard_zh`: 本教程说明如果使用部署在机载电脑端的RTK设备，使自驾仪获取高精度定位。
+
+
 .. toctree::
    :hidden:
    :maxdepth: 2
@@ -33,6 +36,7 @@
    ros_driver_zh
    firmware_upgrade_zh
    chassis_can_protocol_zh
+   rtk_onboard_zh
    offboard_cplus_zh
    sim_env_zh
 

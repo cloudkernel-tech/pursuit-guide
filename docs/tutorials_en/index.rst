@@ -23,6 +23,7 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_sitl_sim`: This tutorial describes how to employ our proprietary simulation environment to accelerate software validation workflow.
 
+* :ref:`tutorial_rtk_onboard`: This tutorial illustrates how to feed the RTK signals from the onboard computer into the autopilot for high precision positioning.
 
 .. toctree::
    :hidden:
@@ -34,6 +35,7 @@ The tutorial chapter covers the following content up to now:
    ros_driver
    firmware_upgrade
    chassis_can_protocol
+   rtk_onboard
    offboard_cplus
    sim_env
 
