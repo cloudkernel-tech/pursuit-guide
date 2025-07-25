@@ -1,6 +1,6 @@
 .. _tutorial_rtk_onboard:
 
-Accessing the RTK installed with the onboard computer
+Access the RTK installed with the onboard computer
 =============================================================
 
 In cases where customers sometimes install RTK GPS directly with the onboard computer,
