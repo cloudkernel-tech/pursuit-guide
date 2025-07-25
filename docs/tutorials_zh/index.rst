@@ -5,7 +5,7 @@
 
 **必读**
 
-* :ref:`tutorial_minimal_guide_zh`: 最简单的用户使用指南。
+* :ref:`tutorial_minimal_guide_zh`
 
 **入门操作级别**
 
