@@ -3,6 +3,10 @@
 
 教程章节到目前为止涵盖了以下内容：
 
+**置顶**
+
+* :ref:`tutorial_minimal_guide_zh`: 最简单的用户使用指南。
+
 **入门操作级别**
 
 * :ref:`tutorial_periph_config_zh`:本教程介绍如何为 Pursuit 自动驾驶仪配置各种外围设备。
@@ -33,6 +37,7 @@
    :hidden:
    :maxdepth: 2
 
+   minimal_guide_zh
    periph_config_zh
    qgc_console_zh
    docker_env_zh

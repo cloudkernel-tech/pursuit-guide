@@ -1,7 +1,7 @@
 .. _tutorial_offboard_avoidance:
 
-Avoidance in the Offboard Mode
-=================================
+Obstacle Avoidance in the Offboard Mode
+===========================================
 
 The autonomous obstacle avoidance in offboard mode refers to the ability of the ground vehicle to avoid obstacles when the user
 issues target points in offboard mode. The initiation process is exactly the same as described in the :ref:`tutorial_mission_avoidance` section,
