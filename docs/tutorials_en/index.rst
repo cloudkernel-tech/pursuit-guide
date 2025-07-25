@@ -27,6 +27,9 @@ The tutorial chapter covers the following content up to now:
 
 * :ref:`tutorial_mission_avoidance`: The tutorial demonstrates the setup procedure to enable the obstacle avoidance in the mission mode。
 
+* :ref:`tutorial_offboard_avoidance`: The tutorial demonstrates the setup procedure to enable the obstacle avoidance in the offboard mode。
+
+
 .. toctree::
    :hidden:
    :maxdepth: 2
@@ -41,5 +44,6 @@ The tutorial chapter covers the following content up to now:
    offboard_cplus
    sim_env
    mission_avoidance
+   offboard_avoidance
 
 

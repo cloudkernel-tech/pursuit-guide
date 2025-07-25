@@ -83,7 +83,6 @@ avoidance status not ready.
 
     sudo crontab -e
 
-    # Add the following text with correct USER NAME for the
-    host computer
+    # Add the following text with correct USER NAME for the host computer
     @reboot sleep 30s && /home/<USER_NAME>/src/catkinws_nav/run_pursuit_agv_nodes.sh
 

@@ -25,8 +25,9 @@
 
 * :ref:`tutorial_rtk_onboard_zh`: 本教程说明如果使用部署在机载电脑端的RTK设备，使自驾仪获取高精度定位。
 
-* :ref:`tutorial_mission_avoidance_zh`: 本教程说明如果在航路点任务模式下实现室外自主避障。
+* :ref:`tutorial_mission_avoidance_zh`: 本教程说明如何在航路点任务模式下实现室外自主避障。
 
+* :ref:`tutorial_offboard_avoidance_zh`: 本教程说明如何在线控制模式下实现室外自主避障。
 
 .. toctree::
    :hidden:
@@ -42,6 +43,7 @@
    offboard_cplus_zh
    sim_env_zh
    mission_avoidance_zh
+   offboard_avoidance_zh
 
 
 
