@@ -3,6 +3,10 @@ Tutorials
 
 The tutorial chapter covers the following content up to now:
 
+**Must Read**
+
+* :ref:`tutorial_minimal_guide`: Here is the minimal user guide.
+
 **Beginner Level**
 
 * :ref:`tutorial_periph_config`: This tutorial shows how to configure various peripherals for Pursuit autopilot.
@@ -34,6 +38,7 @@ The tutorial chapter covers the following content up to now:
    :hidden:
    :maxdepth: 2
 
+   minimal_guide
    periph_config
    qgc_console
    docker_env
