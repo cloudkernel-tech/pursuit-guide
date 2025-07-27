@@ -18,9 +18,9 @@
 
 ::
 
-    /mavros/gps_status/rtk/gpgga_output
-    /mavros/gps_status/rtk/navsatfix_output
-    /mavros/gps_status/rtk/odom_output
+    /mavros/gpsstatus/rtk/gpgga_output
+    /mavros/gpsstatus/rtk/navsatfix_output
+    /mavros/gpsstatus/rtk/odom_output
 
 在自驾仪端我们设置GPS_RTK_ONB_EN参数为1，然后我们正常操作流程启动docker中的mavros节点即可。
 

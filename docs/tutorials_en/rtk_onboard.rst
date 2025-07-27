@@ -21,9 +21,9 @@ We need to remap its three corresponding topics to the following mavros topics:
 
 ::
 
-    /mavros/gps_status/rtk/gpgga_output
-    /mavros/gps_status/rtk/navsatfix_output
-    /mavros/gps_status/rtk/odom_output
+    /mavros/gpsstatus/rtk/gpgga_output
+    /mavros/gpsstatus/rtk/navsatfix_output
+    /mavros/gpsstatus/rtk/odom_output
 
 On the autopilot side, we set the GPS_RTK_ONB_EN parameter to 1, and then we can start the mavros node in the docker container
 following the normal operating procedure.
