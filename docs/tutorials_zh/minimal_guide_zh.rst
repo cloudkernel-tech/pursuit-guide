@@ -20,7 +20,7 @@
 
     - 无人车底盘测试： 参考 :ref:`tutorial_qgc_console_zh` 中的无人车底盘状态进行测试。
 
-    - RTK状态测试： 参考 :ref:`tutorial_qgc_console_zh` 中的RTK定位状态进行测试。如果RTK连接到机载电脑端通过ROS启动，则需要参考 :ref: `tutorial_rtk_onboard_zh` 进行操作。
+    - RTK状态测试： 参考 :ref:`tutorial_qgc_console_zh` 中的RTK定位状态进行测试。如果RTK连接到机载电脑端通过ROS启动，则需要参考 :ref:`tutorial_rtk_onboard_zh` 进行操作。
 
 
 #. 机载软件部署： 参考用户手册5.2章节进行机载电脑端的docker镜像和容器操作；同时也需要我司技术人员同步云端软件设置，以满足避障等高级性能要求。
