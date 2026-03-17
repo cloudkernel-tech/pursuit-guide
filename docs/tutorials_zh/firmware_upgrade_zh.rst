@@ -3,31 +3,11 @@
 自驾仪固件远程升级
 =============================
 
-
-Pursuit 飞控的固件可以升级，保证软件的稳定性并获得最新的改进。 使用我们在此处发布的定制 QGroundcontrol 软件 (`<https://github.com/cloudkernel-tech/qgroundcontrol/releases/download/v0.2.1/QGC_3.5.6_kerloud_202411.AppImage>`_)，可以轻松进行升级
-
-用户可以在此链接 `<https://github.com/cloudkernel-tech/qgroundcontrol/releases>`_ 寻找最新的版本，以支持windows 11系统。
+Pursuit 飞控的固件可以定期升级，保证软件的稳定性并获得最新的改进。
 
 升级步骤如下：
 
-- 在 Ubuntu 18.04 主机上下载 QGroundcontrol 软件。
-
-- 在终端中运行以下命令以正确设置环境，完成后需重启计算机使设置生效。
-
-::
-
-        sudo usermod -a -G dialout $USER
-        sudo apt-get remove modemmanager -y
-        sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
-
-        chmod +x ./QGC_3.5.6_kerloud_202411.AppImage
-
-- 启动 QGroundcontrol 软件
-
-::
-
-        # start the app with command
-        ./QGC_3.5.6_kerloud_202411.AppImage
+- 启动专用的QGroundcontrol 软件 （支持Ubuntu 18.04和Windows 11系统），参考 :ref:`section_quickstart_zh` 部分进行下载和安装。
 
 - 选择 设置 菜单下的 固件 选项卡。 断开自驾仪的直流电源，然后通过Micro USB线将自驾仪的debug口连接到计算机。点击右侧的 高级设置（Advanced settings） ，选择“Pursuit autopilot release （Cloudkernel）”选项。然后可以通过单击右上角的“OK”按钮来触发自动升级过程。
 
