@@ -23,7 +23,7 @@ Software
 
 (1) QGroundControl Ground Station Software
 
-The Pursuit-specific QGC ground station is released on our official GitHub page: `<https://github.com/cloudkernel-tech/qgroundcontrol/releases>`, and will be continuously updated.
+The Pursuit-specific QGC ground station is released on our official GitHub page: `<https://github.com/cloudkernel-tech/qgroundcontrol/releases>`_ , and will be continuously updated.
 
 - Windows 11:
 
