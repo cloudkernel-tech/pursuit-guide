@@ -48,10 +48,10 @@ Other products can be found in the following links:
 
 * Kerloud autopilot: `<https://cloudkernel.cn/kerloud-autopilot>`_
 * Kerloud UAV: `<https://cloudkernel.cn/kerloud-uav>`_
-* Kerloud flying rover series: `<https://kerloud-flyingrover.readthedocs.io>`_
-* Kerloud VTOL products:`<https://kerloud-vtol.readthedocs.io>`_
-* Kerloud autocar series: `<https://kerloud-autocar.readthedocs.io>`_
-* Kerloud DASA (Dynamic Autonomous System Arena) solution: `<https://kerloud-dasa.readthedocs.io>`_
+* Kerloud flying rover series: `<https://cloudkernel.cn/kerloud-flyingrover>`_
+* Kerloud VTOL products: `<https://cloudkernel.cn/kerloud-vtol>`_
+* Kerloud autocar series: `<https://cloudkernel.cn/kerloud-autocar>`_
+* Kerloud DASA (Dynamic Autonomous System Arena) solution: `<https://cloudkernel.cn/kerloud-dasa>`_
 
 Our main webpage is `<https://cloudkernel.cn>`_, and you may contact us by email: contact@cloudkernel.cn.
 
@@ -78,10 +78,10 @@ Pursuit自动驾驶仪由云讷科技（深圳）有限公司推出，是一种�
 
 * Kerloud 自动驾驶仪: `<https://cloudkernel.cn/kerloud-autopilot>`_
 * Kerloud 无人机: `<https://cloudkernel.cn/kerloud-uav>`_
-* Kerloud 无人飞车系列: `<https://kerloud-flyingrover.readthedocs.io>`_
-* Kerloud 垂直起降固定翼产品: `<https://kerloud-vtol.readthedocs.io>`_
-* Kerloud 无人车系列: `<https://kerloud-autocar.readthedocs.io>`_
-* Kerloud DASA (Dynamic Autonomous System Arena) 机器人赛场方案: `<https://kerloud-dasa.readthedocs.io>`_
+* Kerloud 无人飞车系列: `<https://cloudkernel.cn/kerloud-flyingrover>`_
+* Kerloud 垂直起降固定翼产品: `<https://cloudkernel.cn/kerloud-vtol>`_
+* Kerloud 无人车系列: `<https://cloudkernel.cn/kerloud-autocar>`_
+* Kerloud DASA (Dynamic Autonomous System Arena) 机器人赛场方案: `<https://cloudkernel.cn/kerloud-dasa>`_
 
 我们的主页是 `<https://cloudkernel.cn>`_, 你可以通过邮件 contact@cloudkernel.cn 联系到我们。
 
