@@ -19,9 +19,6 @@ Pursuit自动驾驶仪的ROS API在ROS包中实现，我们维护了以下几个
 
 - **mavros** (dev_pursuit_agv 分支， 持续更新)：为Pursuit自动驾驶仪定制的mavros包，它是与自驾仪交互的另外一个包，只适合高级开发者使用，仓库地址： `<https://gitee.com/cloudkernel-tech/mavros>`_
 
-- **pursuit_driver** (main 分支，已停止更新): 通过串行通信与自动驾驶仪接口的ROS包，仅限于使用者，相比mavros包简化很多，仓库地址：`<https://gitee.com/cloudkernel-tech/pursuit_driver>`_
-
-
 1. pursuit_msgs包
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -138,69 +135,3 @@ mavros 包源自 PX4 社区（ `<http://wiki.ros.org/mavros>`_ ）。我们为 P
 - ~mavros/cmd/arming (`mavros_msgs/CommandBool <http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html>`_)
 
        从机载计算机更改锁定状态，例如上锁/解锁切换。
-
-
-3. pursuit_driver包
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. caution::
-
-    pursuit_driver包已停止更新，开发者请参考前述mavros进行开发，以实现功能更全面的应用。
-
-
-(1) 订阅话题
-""""""""""""""""""""""
-
-**以下话题仅用于产品发布，开发者不建议使用**
-
-- /pursuit_outdoor_avoidance/trajectory/generated (`mavros_msgs::Trajectory <http://docs.ros.org/en/melodic/api/mavros_msgs/html/msg/Trajectory.html>`_):
-
-   导航模块生成的轨迹，将被发送到Pursuit自动驾驶仪。
-
-- /pursuit_outdoor_avoidance/avoidance_status (`pursuit_msgs::AvoidanceStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/AvoidanceStatus.msg>`_):
-
-    使用机载激光扫描仪进行障碍物检测的避障状态
-
-- /pursuit_nav/smooth_cmd_vel (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
-
-    导航模块生成的平滑速度命令，将被发送到Pursuit自动驾驶仪。
-
-
-(2) 发布话题
-""""""""""""""""""""""""
-
-- ~pursuit_driver/ackermann_drive_cmd ( `ackermann_msgs::AckermannDriveStamped <https://docs.ros.org/en/melodic/api/ackermann_msgs/html/msg/AckermannDriveStamped.html>`_ ):
-
-    由自动驾驶仪发送给VCU AGV底盘的驾驶命令，适用于阿克曼车辆。
-
-- ~pursuit_driver/vehicle_gps_position ( `mavros_msgs::GPSRAW <https://docs.ros.org/en/melodic/api/mavros_msgs/html/msg/GPSRAW.html>`_):
-
-    车辆的GPS位置，这是机载RTK设备的输出。
-
-- ~pursuit_driver/vehicle_local_pose ( `geometry_msgs::PoseStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html>`_):
-
-    车辆在定位准备完成且GPS锁定后，以东-北-上(ENU)坐标系中表达的本地位置和姿态。
-
-- ~pursuit_driver/vehicle_local_velocity (`geometry_msgs::TwistStamped <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/TwistStamped.html>`_):
-
-    在ENU坐标系中表达的车辆本地速度。
-
-- ~pursuit_driver/trajectory/desired (`mavros_msgs::Trajectory <http://docs.ros.org/en/melodic/api/mavros_msgs/html/msg/Trajectory.html>`_):
-
-    由自动驾驶仪请求的期望航点设定。
-
-- ~pursuit_driver/vehicle_ctrl_state (`pursuit_msgs::VehicleCtrlState <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VehicleCtrlState.msg>`_):
-
-    自动驾驶仪定义的控制状态，包括解锁状态、导航状态等。
-
-- ~pursuit_driver/vcu_base_status (`pursuit_msgs::VcuBaseStatus <https://gitee.com/cloudkernel-tech/pursuit_msgs/blob/main/msg/VcuBaseStatus.msg>`_):
-
-    地面车辆中VCU单元的状态。
-
-- ~pursuit_driver/vcu_cmd_vel (`geometry_msgs::Twist <https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html>`_):
-
-    Pursuit自动驾驶仪发送给VCU单元的速度命令。
-
-- ~pursuit_driver/vehicle_angular_velocity (`std_msgs::Float32MultiArray <https://docs.ros.org/en/melodic/api/std_msgs/html/msg/Float32MultiArray.html>`_):
-
-    在ENU坐标系中表达的车辆姿态角速率。
