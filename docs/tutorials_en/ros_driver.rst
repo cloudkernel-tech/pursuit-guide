@@ -14,7 +14,7 @@ The interface with the mavros package is enabled by setting parameters as:
 
 ::
 
-        SER_TEL2_BAUD = 921600  # the default baud rate for mavros interface, which is visible only after setting ROS_LINK_EN=0
+        SER_TEL2_BAUD = 921600  # the default baud rate for mavros interface
 
 Users have to locate the USB port (the default name is /dev/ttyPursuit) for the autopilot in the companion computer, and then start the node with:
 
